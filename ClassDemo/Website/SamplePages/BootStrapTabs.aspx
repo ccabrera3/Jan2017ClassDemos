@@ -63,7 +63,6 @@
                                                      <tr runat="server" style="">
                                                          <th runat="server">ArtistId</th>
                                                          <th runat="server">Name</th>
-                                                
                                                      </tr>
                                                      <tr runat="server" id="itemPlaceholder"></tr>
                                                  </table>
@@ -95,7 +94,7 @@
                  <div role="tabpanel" class="tab-pane" id="albums">
                       <asp:UpdatePanel ID="UpdatePanel3" runat="server">
                         <ContentTemplate>
-                            <asp:ListView ID="AlbumList" runat="server" DataSourceID="AlbumListODS">
+                            <asp:ListView ID="AlbumList" runat="server" DataSourceID="AlbumListODS" >
                                 <EmptyDataTemplate>
                                      <table runat="server" style="">
                                          <tr>
@@ -143,7 +142,8 @@
                             <asp:ObjectDataSource ID="AlbumListODS" runat="server" 
                                  OldValuesParameterFormatString="original_{0}" 
                                  SelectMethod="ArtistAlbumReleases_List" 
-                                 TypeName="ChinookSystem.BLL.AlbumController">
+                                 TypeName="ChinookSystem.BLL.AlbumController"
+                                >
                             </asp:ObjectDataSource>
                         </ContentTemplate>
                     </asp:UpdatePanel>   
